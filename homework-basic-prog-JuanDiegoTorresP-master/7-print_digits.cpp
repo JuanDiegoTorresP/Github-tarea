@@ -14,10 +14,10 @@ if(num>=0&&num<10000){
    d=num-a-b-c;
    }
       else{
-         std::cout<<''Numero invalido''<<std::endl;
+         std::cout<<"Numero invalido"<<std::endl;
    }
      print_digits(a, b, c, d);
    }
       void print_digits(int a, int b, int c, int d){
-         std::cout<<d/1000<<'' ''<<c/100'' ''<<b/10<<'' ''a''std::endl;
+         std::cout<<d/1000<<" "<<c/100" "<<b/10<<" "a"std::endl;
       }
