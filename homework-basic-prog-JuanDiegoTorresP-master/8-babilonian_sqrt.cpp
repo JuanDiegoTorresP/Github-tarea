@@ -1,5 +1,5 @@
-#include <iostream>
-#include <cstdlib>
+#include<iostream>
+#include<cstdlib>
 
 double babilonian_sqrt(int nreps);
 
@@ -9,12 +9,17 @@ int main(int argc, char *argv[]) {
 
   int m = std::atoi(argv[1]);
 
-  std::cout << m << " " << babilonian_sqrt(m) << "\n";
+  std::cout << babilonian_sqrt(m) << "\n";
 
   return 0;
 }
 
 double babilonian_sqrt(int nreps)
-{
-  TODO: Remueva esta linea e implemente la solucion
+{ double x=1.0;
+  for(int n=1;n<=nreps;n++){
+    double x_new=(x+(2.0/x))/2.0;
+    std::cout<<"Iteración numero: "<<n<<". Lo cual da el resultado: "<<x_new<<std::endl;
+    x=x_new;
+  }
+  return x;
 }
