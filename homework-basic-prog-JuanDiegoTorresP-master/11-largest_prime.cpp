@@ -1,3 +1,4 @@
+// 11-largest_prime.cpp
  #include <iostream>
  #include <cstdlib>
  #include <cmath>
@@ -14,11 +15,31 @@
  }
 
  int largest_prime(int n)
- {
-   TODO: Elimine esta linea e implmente la solucion
+ { int prime;
+   for(int j=0;j<n;j++){
+       if(isprime(n-j)==1){
+           prime=n-j;
+           break;
+       }
+       else{
+           continue;
+       }
+   }
+   return prime;
  }
 
- int isprime(int n)
+ bool isprime(int n)
  {
-   TODO: Elimine esta linea e implmente la solucion
+      int cont=0;
+   for (int i=2;i<sqrt(n);i++){
+       if(n%i==0){
+           cont++;
+       }
+   }
+   if(cont==0){
+       return 1;
+   }
+   else{
+       return 0;
+   }
  }
